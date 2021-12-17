@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!--COMP229_ASSIGNMENT1_301174653 --------- Satwinder kaur -------  30174653  -------- 10th october-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"rel="stylesheet">
+</head>
+<body> 
+   <div class="container">
+    <div class="homepage">
+    <nav>
+    <img src="/images/image1.png"alt="my logo"width="150px"height="150px">
+    <!-- Main Navigation -->
+  
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+        
+        <li class="nav-item active">
+          <a class="nav-link" href="/"> Home </a>
+        </li>
+
+    
+        <li class="nav-item">
+    
+          <a class="nav-link" href="/about.hbs"> About </a>
+        </li>
+
+
+        <li class="nav-item">
+        
+          <a class="nav-link" href="/project.hbs"> Projects </a>
+        </li>
+
+        
+        <li class="nav-item" >
+        
+          <a class="nav-link" href="/service.hbs">Services </a>
+        </li>
+
+       
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.hbs"> Contact </a>
+        </li>
+        </ul>
+    </div>
+  </nav><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2 style="color: rgb(143, 92, 40);">About Me</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2 style="color: rgb(143, 92, 40);">Contacts</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2 style="color: rgb(143, 92, 40);">Service</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2 style="color: rgb(143, 92, 40);">Projects</h2>-->
+    </div>
+    </nav>
+
+    
+    <div class = "About"></div>
+    <div class = "Project"></div>
+    <div class = "Service"></div>
+    <div class = "Contact"></div>
+   
+    </div>
+    
+<!-- Main Content -->
+<main class="container">
+    <div class="row">
+        <div>
+            <h1><%= title %></h1>
+            <a href="/list-contacts/add" class="btn btn-danger btn-lg" role="button">
+                <i class="fas fa-user-plus"></i>&nbsp;Add a new Contact
+            </a>
+            <br>
+            <table class="table table-striped">
+                <!-- Header Row-->
+                <thead>
+                    <tr>
+                        <th class="text-center" scope="col">ConatctNo.</th>
+                        <th class="text-center" scope="col">Created By</th>
+                        <th class="text-center" scope="col">Phone Number</th>
+                        <th class="text-center" scope="col">E-mail Address</th>
+                        <th class="text-center" scope="col"></th>
+                        <th class="text-center" scope="col"></th>
+                    </tr>
+                </thead>
+                <!-- Repeatable Template Row -->
+                <tbody>
+                    <% for(let count = 0; count < ListRecords.length; count++) { %>
+                        <tr>
+                            <th class="text-center" scope="row"><%= (count+1) %></th>
+                            <td class="text-center"><%= ListRecords[count].name %></td>
+                            <td class="text-center"><%= ListRecords[count].phoneNo %></td>
+                            <td class="text-center"><%= ListRecords[count].email %></td>
+                            <td class="text-center">
+                                <a href="/list-contacts/take/<%= ListRecords[count]._id %>" class="btn btn-danger btn-lg">
+                                    <i class="fas fa-pencil-alt"></i>&nbsp;Update
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <a href="/list-contacts/edit/<%= ListRecords[count]._id %>" class="btn btn-danger btn-lg">
+                                    <i class="fas fa-user-edit"></i>&nbsp;Edit
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <a href="/list-contacts/remove/<%= ListRecords[count]._id %>" class="btn btn-danger btn-lg" name="deleteButton">
+                                    <i class="fas fa-trash-alt"></i>&nbsp;Delete
+                                </a>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!--COMP229_ASSIGNMENT1_301174653 --------- Satwinder kaur -------  30174653  -------- 10th october-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"rel="stylesheet">
+</head>
+<body> 
+   <div class="container">
+    <div class="homepage">
+    <nav>
+    <img src="/images/image1.png"alt="my logo"width="150px"height="150px">
+    <!-- Main Navigation -->
+  
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+        
+        <li class="nav-item active">
+          <a class="nav-link" href="/"> Home </a>
+        </li>
+
+    
+        <li class="nav-item">
+    
+          <a class="nav-link" href="/about.hbs"> About </a>
+        </li>
+
+
+        <li class="nav-item">
+        
+          <a class="nav-link" href="/project.hbs"> Projects </a>
+        </li>
+
+        
+        <li class="nav-item" >
+        
+          <a class="nav-link" href="/service.hbs">Services </a>
+        </li>
+
+       
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.hbs"> Contact </a>
+        </li>
+        </ul>
+    </div>
+  </nav><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2 style="color: rgb(143, 92, 40);">About Me</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2 style="color: rgb(143, 92, 40);">Contacts</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2 style="color: rgb(143, 92, 40);">Service</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2 style="color: rgb(143, 92, 40);">Projects</h2>-->
+    </div>
+    </nav>
+
+    
+    <div class = "About"></div>
+    <div class = "Project"></div>
+    <div class = "Service"></div>
+    <div class = "Contact"></div>
+   
+    </div>
+    
+
+<main class="container">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-3 col-md-6" style="padding: 10px;">
+                <h1><%= title %></h1>
+              
+    
+                <form class="form" method="POST">
+                    <div class="form-group" style="padding: 10px;">
+                        <label for="txtName"> Name</label>
+                        <input type="text" class="form-control"
+                        id="txtName"
+                        placeholder="Enter Name"
+                        name="name" required>
+                    </div>
+    
+                    <div class="form-group" style="padding: 10px;">
+                        <label for="txtPhone"> Phone Number</label>
+                        <input type="text" class="form-control"
+                        id="txtPhone"
+                        placeholder="Enter Phone Number"
+                        name="phoneNo" required>
+                    </div>
+    
+                    <div class="form-group" style="padding: 10px;">
+                        <label for="txtEmail"> E-Mail</label>
+                        <input type="text" class="form-control"
+                        id="txtEmail"
+                        placeholder="Enter E-mail"
+                        name="email" required>
+                    </div>
+                    
+                        
+                    <div class="form-group" style="padding: 10px;">
+                        <button class="btn btn-primary btn-lg">
+                            <i class="fas fa-check"></i>Add a Contact
+                        </button>
+                    </div>
+
+    
+                    <button class="btn btn-primary btn-lg" type="submit">
+                        <i class="fas fa-check"></i>Update
+                    </button>
+                    
+                    <a href="/list-contacts" class="btn btn-warning btn-lg">
+                        <i class="fas fa-undo"></i>Cancel
+                    </a>
+
+                </form>
+            </div>
+    
+        </div>
+    </div>
+</main>
+</body>
+</html>
